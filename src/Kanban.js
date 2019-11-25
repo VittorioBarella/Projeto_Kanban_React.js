@@ -5,16 +5,18 @@ import update from "immutability-helper";
 
 // INÍCIO TAREFAS 
 const tasks = [
-  { _id: 1, title: "Estudar Wiki do Service Place", status: "backlog" },
-  { _id: 2, title: "Second Task", status: "backlog" },
-  { _id: 3, title: "Third Task", status: "backlog" },
-  { _id: 4, title: "Fourth Task", status: "new" },
-  { _id: 5, title: "Fifth Task", status: "new" },
-  { _id: 6, title: "Sixth Task", status: "wip" },
-  { _id: 7, title: "Seventh Task", status: "review" },
-  { _id: 8, title: "Eighth Task", status: "review" },
-  { _id: 9, title: "Ninth Task", status: "done" },
-  { _id: 10, title: "Tenth Task", status: "done" }
+  { _id: 1, title: "Enterder os objetivos da aplicação e seus principais componentes.", status: "backlog" },
+  { _id: 2, title: "Estudar Wiki do Service Place", status: "backlog" },
+  { _id: 3, title: "Conseguir configurar seus principais componentes no ambiente local de desenvolvimento", status: "backlog" },
+  { _id: 4, title: "Possuir 1 cliente proprio configurado nos ambientes DIT,FIT e Staging.", status: "backlog" },
+  { _id: 5, title: "Realizar os treinamentos sugeridos pelo padrinho: React, Storybook", status: "backlog" },
+  { _id: 6, title: "Conhecer o código da aplicação", status: "backlog" },
+  { _id: 7, title: "Conhecer o frontend lendo o código e inspecionando a UI a partir do browser.", status: "backlog" },
+  { _id: 8, title: "Conhecer o backend através do fluxo de execução de alguns serviços", status: "backlog" },
+  { _id: 9, title: "Participar ativamente e colaborar nas cerimonias", status: "backlog" },
+  { _id: 10, title: "Participar das estimativas expondo seu ponto de vista", status: "backlog" },
+  { _id: 11, title: "Cumprir as tarefas dentro do prazo estimado", status: "backlog" },
+  { _id: 12, title: "Realizar seções de pair programming com o padrinho ou com os outros membros do time de desenvolvimento", status: "backlog" }
 ];
 // FIM TAREFAS 
 
@@ -23,12 +25,13 @@ const channels = ["backlog", "new", "wip", "review", "done"];
 const labelsMap = {
   backlog: "Backlog",
   new: "Fazer",
-  wip: "In Progress",
-  review: "Review",
-  done: "Done"
+  wip: "Em Progresso",
+  review: "Em Revisão",
+  done: "Feita"
 };
 // FIM LABELS DO HEADER
 
+// INÍCIO ESTILO DO KANBAN
 const classes = {
   board: {
     display: "flex",
@@ -57,7 +60,7 @@ const classes = {
     backgroundColor: "white"
   }
 };
-
+// FIM ESTILO DO KANBAN
 class Kanban extends React.Component {
   constructor(props) {
     super(props);
